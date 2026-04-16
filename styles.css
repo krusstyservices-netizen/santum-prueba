@@ -1,0 +1,123 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: black;
+  color: #FFD700;
+  font-family: Arial;
+  overflow: hidden;
+}
+
+/* CANVAS */
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+/* NAV */
+.nav {
+  position: fixed;
+  top: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  z-index: 10;
+}
+
+.nav a {
+  color: #FFA500;
+  text-decoration: none;
+  padding: 8px 16px;
+  border: 1px solid #FFA500;
+  transition: 0.3s;
+}
+
+.nav a:hover {
+  background: #FFA500;
+  color: black;
+  box-shadow: 0 0 10px #FFA500;
+}
+
+/* CENTER */
+.center, .page {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 10;
+}
+
+/* TITLE */
+.title {
+  font-size: 80px;
+  text-shadow: 0 0 20px #FFA500;
+}
+
+.title.small {
+  font-size: 50px;
+}
+
+/* SUB */
+.subtitle {
+  margin-top: 10px;
+  color: #FFA500;
+}
+
+/* BUTTON */
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 25px;
+  border: 1px solid #FFA500;
+  color: #FFA500;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: #FFA500;
+  color: black;
+}
+
+/* PRODUCTS */
+.products {
+  margin-top: 40px;
+  display: flex;
+  gap: 30px;
+}
+
+.card {
+  border: 1px solid #FFA500;
+  padding: 20px;
+  width: 200px;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #FFA500;
+}
+
+.card button {
+  margin-top: 10px;
+  padding: 5px 10px;
+  background: none;
+  border: 1px solid #FFA500;
+  color: #FFA500;
+}
+
+/* FADE ANIMATION */
+.fade {
+  animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translate(-50%, -60%); }
+  to { opacity: 1; transform: translate(-50%, -50%); }
+}
