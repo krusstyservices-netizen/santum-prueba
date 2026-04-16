@@ -36,4 +36,20 @@ setInterval(draw, 33);
 window.addEventListener("resize", () => {
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
+}
+// ===== DISCORD BUTTON ANIMATION =====
+const discordBtn = document.querySelector(".discord-btn");
+const overlay = document.getElementById("overlay");
+
+if (discordBtn) {
+  discordBtn.addEventListener("click", function (e) {
+    e.preventDefault();
+
+    overlay.classList.add("active");
+
+    setTimeout(() => {
+      window.open("https://discord.gg/santum", "_blank");
+      overlay.classList.remove("active");
+    }, 500);
+  });
 });
